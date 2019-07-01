@@ -32,6 +32,26 @@ public class ShipwreckStub {
 	public Collection<Shipwreck> list() {
 		return getWrecks().values();
 	}
+	
+	public Shipwreck create(Shipwreck wreck) {
+		getWrecks().put(wreck.getId(), wreck);
+		return wreck;
+	}
+	
+	public Shipwreck update(Shipwreck wreck) {
+		getWrecks().put(wreck.getId(), wreck);
+		return wreck;
+	}
+	
+	public Shipwreck delete(Long id) {
+		Shipwreck wreck = getWrecks().get(id);
+		getWrecks().remove(id);
+		return wreck;
+	}
+	
+	public Shipwreck get(Long id) {
+		return getWrecks().get(id);
+	}
 
 	/**
 	 * @return the wrecks

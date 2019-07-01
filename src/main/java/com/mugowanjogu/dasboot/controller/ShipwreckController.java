@@ -4,6 +4,9 @@
 package com.mugowanjogu.dasboot.controller;
 
 import java.util.Collection;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +25,7 @@ import com.mugowanjogu.dasboot.model.Shipwreck;
 public class ShipwreckController {
 	@Autowired
 	private ShipwreckStub stub;
+	private Log log = LogFactory.getLog(getClass());
 	
 	@RequestMapping(method = RequestMethod.GET, value = "all")
 	public Collection<Shipwreck> list() {
@@ -40,6 +44,7 @@ public class ShipwreckController {
 	
 	@RequestMapping(method = RequestMethod.GET, value="{id}")
 	public Shipwreck get(@PathVariable Long id) {
+		log.debug("retrieving shipwreck with id :" + id);
 		return stub.get(id);
 	}
 	

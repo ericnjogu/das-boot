@@ -41,6 +41,15 @@ public class Shipwreck {
 	}
 	
 	/**
+	 * 
+	 */
+	public Shipwreck() {
+		super();
+	}
+
+
+
+	/**
 	 * @return the id
 	 */
 	public Long getId() {

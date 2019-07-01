@@ -2,3 +2,7 @@ logging:
  level:
   org.springframework.web: ERROR
   com.mugowanjogu.dasboot: DEBUG
+
+spring:
+  profiles:
+    active: prod

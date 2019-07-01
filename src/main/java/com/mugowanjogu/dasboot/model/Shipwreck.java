@@ -47,8 +47,6 @@ public class Shipwreck {
 		super();
 	}
 
-
-
 	/**
 	 * @return the id
 	 */

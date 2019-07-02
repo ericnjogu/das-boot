@@ -4,6 +4,7 @@
 package com.mugowanjogu.dasboot.controller;
 
 import java.util.Collection;
+import java.util.Optional;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -45,9 +46,10 @@ public class ShipwreckController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="{id}")
-	public Shipwreck get(@PathVariable Long id) {
-		log.debug("retrieving shipwreck with id :" + id);
-		return repository.getOne(id);
+	public Optional<Shipwreck> get(@PathVariable Long id) {
+		log.debug("retrieving shipwreck with id: " + id);
+		
+		return repository.findById(id);
 	}
 	
 	@RequestMapping(method = RequestMethod.DELETE, value="{id}")

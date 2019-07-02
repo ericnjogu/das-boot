@@ -1,0 +1,1 @@
+alter table shipwreck add column condition varchar(255);

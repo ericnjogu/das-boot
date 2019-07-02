@@ -31,6 +31,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none 
+      
+  jackson:
+    serialization:
+     fail-on-empty-beans: false
 
 # uses the same db as primary datasource but could point to another db      
 flyway: 
